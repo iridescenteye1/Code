@@ -1,0 +1,442 @@
+import time #to add a delay feature.
+from colorama import Fore, Style, Back #providing a much livelier atmosphere through colored texts.
+import random
+from datetime import date
+from dateutil.relativedelta import relativedelta
+
+tl1 = f"{Fore.YELLOW}{Style.BRIGHT}AGRI{Style.RESET_ALL}"
+tl2 = f"{Fore.GREEN}{Style.BRIGHT}NURTURE{Style.RESET_ALL}"
+print (f"WELCOME TO "+ tl1 + tl2)
+time.sleep(1)
+name = input("What do we call you?: ")
+clr_name = f"{Fore.BLUE}{Style.BRIGHT}"+(name)+f"{Style.RESET_ALL}"
+print (f"{Fore.CYAN}\x1B[3mTrue growth starts with you.\x1B[0m{Style.RESET_ALL}")
+time.sleep(2.4)
+
+while True: #Main Option Selection Screen 
+#I use while loops to allow users to try again after making a mistake.
+    try:
+      print("What brings you here "+ clr_name+"?")
+      i1 = int(input("[1] Manuals\n[2] Tips\n[3] Plant Fruition Calculator\n"))
+      
+      if i1 in [1,2,3]:
+        break
+      if i1 > 3 and i1 < 1:
+          time.sleep(0.5)
+          print("Invalid Syntax. Please select a number from the options.")   
+    except:
+        time.sleep(0.5)
+        print("That is not a number...")
+
+if i1 == 1: #Manuals Section Code Block
+
+    time.sleep(0.6)
+    print(f"{Fore.BLACK}{Style.BRIGHT}  === MANUALS AVAILABLE ==={Style.RESET_ALL}\
+          \n LEGEND = {Fore.GREEN}{Style.BRIGHT}Beginner{Fore.YELLOW}{Style.BRIGHT}, Intermediate,{Fore.RED}{Style.BRIGHT} Difficult {Style.RESET_ALL} \
+          \n(1){Fore.RED}{Style.BRIGHT}Farm Management{Style.RESET_ALL} by Arnold, J.H \
+          \n(2){Fore.RED}{Style.BRIGHT}Farming{Style.RESET_ALL} by Edward Ash \
+          \n(3){Fore.GREEN}{Style.BRIGHT}Botany Primer{Style.RESET_ALL} by Maine University \
+          \n(4){Fore.YELLOW}{Style.BRIGHT}Superbloom Garden Manual{Style.RESET_ALL} by Tower of London\
+          \n(5){Fore.GREEN}{Style.BRIGHT}Junior Gardening System{Style.RESET_ALL} by EarthBOX \
+          \n(6){Fore.YELLOW}{Style.BRIGHT}The Original Gardening System{Style.RESET_ALL} by EarthBOX \
+          \n(7){Fore.YELLOW}{Style.BRIGHT}Managing a Farm{Style.RESET_ALL} by Sherman Johnson \
+          \n(8){Fore.GREEN}{Style.BRIGHT}Manual of Gardening{Style.RESET_ALL} by L.H Bailey \
+          \n(9){Fore.YELLOW}{Style.BRIGHT}Technical Gardening Manual{Style.RESET_ALL} by Grow Appalachia \
+          \n(10){Fore.GREEN}{Style.BRIGHT}School Gardening Manual{Style.RESET_ALL} by Chartwells{Style.RESET_ALL}")
+    
+    while True:  #If-selection Manuals Code Block   
+        try:   
+            i2 = int(input('Which manual would you like to read?: '))
+      
+            if i2 == 1:
+                print (f"{Fore.CYAN}{Style.BRIGHT} ==Farm Management by Arnold J.H =={Style.RESET_ALL} \
+                       \n{Fore.YELLOW}{Style.BRIGHT}Chapter I{Style.RESET_ALL} WHAT A FARM IS\n")
+                print("The common idea of a farm is that of a piece of land devoted to some agricultural use. We think of a farm mostly in terms of area of land, quality of soil, assorted crops and domestic ani- mals, having, generally speaking, little concep- tion of the really vital thing about it, namely, the adaptation, selection and adjustment of these factors which result in farm organisation. Much is heard about small farms, medium-sized farms, and large farms, yet the '^ large'' farm spoken of may be a small business, as compared with the business done on a ** small' farm. A potato-and-truck farm about one and one-half miles from Louisville, Kentucky, has an area of fifty-four acres, some of it under glass. Seven men are employed the year around and five work animals. \
+                      \nOne team is kept busy in hauling stable-manure from the city, while nearly every day some farm-product is hauled to mar- ket. On a wheat farm in a western State, two men and twelve horses operate about one thou- sand acres of land. The fifty-four-acre farm near Louisville, however, is the larger business, in that more capital is required to run it, the expenses are greater, and the gross receipts greater. The farm near Louisville is valued at $700 per acre, while the thousand acres of wheat- land is valued at $15 per acre. How the Census Bureau Defines a Farm. — The Standard Dictionary defines a farm as follows : **A tract of land under one control or forming a single property devoted to agriculture, stock raising, dairy-products, or some allied indus- try.'' Every ten years the United States Census Bureau, in getting the data relating to farming, has had to define the farm.") 
+                break
+            if i2 == 2:
+                print (f"{Fore.CYAN}{Style.BRIGHT} ==Farming by Edward Ash=={Style.RESET_ALL} \
+                       \n{Fore.YELLOW}{Style.BRIGHT}CHAPTER I{Style.RESET_ALL} LAND AND HOW TO USE IT\n")
+                print("An Excellent Means of Making Money-Out-farmed Farms Increasing-The Ruin of ex-Service Men Old Micawber with Land and Cattle Water and Weeds and Limited Capital-The New Owner no Philanthropist-Pleasure Farms'-Their Uneconomic Rent-Their Increase in Certain Areas-The Advantage of Small Acreage -The 'Inexperienced' arrives at an Estimate-The Result of Advertisements-'Hungry Sharks' Make Offers-The Gouty Owner Going Abroad-Going Concerns'-Factors Governing Value-How to See a Farm-Signs of Bad Farming Small Fortunes Spent in 'Spring-cleaning'-Signs of Bad Yields-Punch's Advice to Those about to Marry -A Small Owner Area-A Good Farm in a few Words-Well-farmed Land-The Importance of Water Supply-Distance from Railway-Household Furniture and Farm Buildings When the Premises Fall Down-The Way to Find a Farm-Capital Required The Wrong View of Farming-What Small Capital Means-The Question of Rent High Rents not Inquisitional An Agricultural Situation with no Parallel- Buying a Farm-The Public Auction-The Bubble has Burst-The Farm goes Cheap. \
+                      \nIN farming, the bringing of good fertile soil down to its knees is an excellent method of making money, and is therefore constantly adopted. Some men make a practice of obtaining good soils in a well-fed and good yielding condition, and by spending little and taking much, add to their banking accounts. Finally they leave the farm depleted of its growing power and full of weeds. Some 'out-farmers', even when the soil is depleted, will stay on, remaining to attack the skeleton. This type of farming is not always 'greed', but the result of economic pressure. Thus the number of out-farmed farms are continually increasing and adding to the unfortunate position. These land skeletons are a problem of considerable complexity.")
+                break 
+            if i2 == 3:
+                print (f"{Fore.CYAN}{Style.BRIGHT} == Botany Primer by Maine University =={Style.RESET_ALL} \
+                       \n{Fore.YELLOW}{Style.BRIGHT}Chapter 1: {Style.RESET_ALL} About a Plant's Life\n")
+                print ("As with all of life, a plant needs energy to grow and change. A plant’s ability to feed itself, through photosynthesis, enables it to produce the chemical and physical components necessary for growth,  maintenance, storage, defense (because, of course, it can’t run from predators), and to reproduce so the species is successful. \
+                       \n \nA plant species’ anatomy and physiology are fine-tuned to its ecological niche, and support an individual’s ability to grow, defend, and survive in its place. For example, in grasslands—which includes many grazing animals within the ecological system, plant species need to be resilient. the anatomy of a grass plant allows it to be munched to the ground without preventing it from resprouting, growing, or reproducing (if you mow a lawn, you are acting like a grazer). trees, on the other hand, would not be able to withstand grazing in the same way as grasses. For this reason, we mow around young tree seedlings planted in lawns. However, trees have their own unique set of adaptations that enable them to thrive in their own particular ecological niche. \
+                       \n \nEach plant organ has a specific role in a functioning plant which varies in importance throughout the plant’s vegetative and reproductive stages of life. Depending on the stage of the life cycle the plant is in, plant organs carry out a variety of important functions.  ")
+                break
+            if i2 == 4:
+                print (f"{Fore.CYAN}{Style.BRIGHT} == Superbloom Garden Manual by Tower of London =={Style.RESET_ALL} \
+                       \n{Fore.YELLOW}{Style.BRIGHT}CREATING A SUPERBLOOM GARDEN {Style.RESET_ALL}\n")
+                print ("Gardens are best for wellbeing when they provide good biodiversity. Attracting pollinators and other wildlife enhances a garden as a natural environment, which can provide better quality experiences and meaningful activity for both children and adults \
+                       \n \nThis Garden Manual is designed to help your group create a garden for wellbeing. The Superbloom in the Tower’s moat includes flowers that are designed to attract pollinators, a key group of species important for the planet’s and human health.  \
+                       \n \nThis manual details in simple terms how to carry out core gardening tasks, to help you grow and maintain a wellbeing garden rich in pollinator and other insect life. Additionally, this manual provides advice to enable you to make important decisions about where to site your garden and what resources you can gather to support you. There are also links to additional information, if you want to take your garden project further. \
+                       \n \nEvery community is different. Even if your community space is not particularly green,  finding ways to increase time spent outdoors  and making the most of the space you have for plants is a positive step for both people’s and planetary health.")
+                break
+            if i2 == 5:
+                print (f"{Fore.CYAN}{Style.BRIGHT} == Junior Gardening System by EarthBox =={Style.RESET_ALL} \
+                       \n \nTo begin, Determine what type and how many plants you need, using the Plant & Fertilizer Placement Chart. Have ready an EarthBox® JuniorTM gardening system, a 1 cubic foot bag of growing media (see below), a water source (minimum of 2 or 3 gallons), a knife or scissors, dolomite (1), and fertilizer (2). Choose a location for your EarthBox® JuniorTM gardening system: Select a sunny spot with a minimum of 8 hours of daily sunshine for warm season crops such as peppers or eggplant; select partial shade for cool season crops such as lettuce, spinach, or arugula. If growing indoors, be sure to place your EarthBox® JuniorTM gardening system in a sunroom or windowsill that gets full sun, or place it under a full-spectrum grow light.\n")
+                print (f"{Fore.YELLOW}{Style.BRIGHT}GROWING MEDIA {Style.RESET_ALL} \n \nAlmost any brand of growing media designated for containers or hanging plants will work. It should be peat-based, and contain perlite and/or vermiculite. You'll need 1 cubic foot (30 dry quarts) per EarthBox® JuniorTM gardening system. Much of today's growing media has a water- soluble or time-release fertilizer added; this is okay to use, but it does NOT replace the fertilizer application (shown in Step 7). Do NOT use compost or growing media that contains rock, clay, sand, or topsoil in the EarthBox® JuniorTM gardening system. \
+                       \n \n{Fore.YELLOW}{Style.BRIGHT}DOLOMITE{Style.RESET_ALL} \n \nDolomite is lime that contains calcium and magnesium. It helps prevent Blossom End Rot (BER), and it helps balance the pH of the growing media. Incorporate a 1⁄2 lb. of dolomite during the initial planting, and each year when replanting your EarthBox® JuniorTM gardening system. When replanting, mix the dolomite in the top 2-3' of the growing media before planting. Do NOT substitute dolomite with hydrated lime.")
+                print (f"\n{Fore.YELLOW}{Style.BRIGHT}FERTILIZER/PLANT FOOD{Style.RESET_ALL} \n \nThe EarthBox® JuniorTM gardening system is designed to be used with a strip of common dry granular fertilizer or plant food for vegetables. Do NOT use water-soluble or time-released fertilizer. Each of the three NPK numbers on the label should be between 5 and 15. You can choose a synthetic fertilizer or an organic fertilizer. If you prefer a synthetic fertilizer, use a 1⁄2 Ib. If you prefer an organic fertilizer, use %4 lb. Do not add any additional fertilizer during the growing season. Both the EarthBox® JuniorTM Ready-To-Grow Kit and the EarthBox® JuniorTM Garden Kit (available at retailers), already include a pre-measured fertilizer great for growing vegetables, herbs, or flowers. \
+                       \n \n{Fore.YELLOW}{Style.BRIGHT}PLANT SELECTION{Style.RESET_ALL} \n \nThe EarthBox® JuniorTM gardening system is designed for growing herbs, flowers, and small vegetable plants. We recommend using the smaller 5-7' seedlings available in 2' pots, or direct seeding with plant types that are normally easy to grow from seed like beans. Do not overcrowd the EarthBox® JuniorTM gardening system. Pay close attention to the recommended plant amounts in the Plant & Fertilizer Placement Chart. For best results, do NOT mix different types of plants in the system.")
+                break
+            if i2 == 6:
+                print (f"{Fore.CYAN}{Style.BRIGHT} == Original Gardening System by EarthBox =={Style.RESET_ALL} \
+                       \n{Fore.YELLOW}{Style.BRIGHT}CHOOSE A LOCATION {Style.RESET_ALL}\n\nChoose a level spot for your EarthBox® gardening system. Select a sunny area with 8 hours of sun for warm season crops such as tomatoes, peppers, and eggplant. Select a shaded area with partial sun for cool season crops such as lettuce, spinach, and peas. \
+                       \n \n{Fore.YELLOW}{Style.BRIGHT}GATHER COMPONENTS {Style.RESET_ALL}\n\nThe EarthBox® gardening system includes the basic parts required for the system to function. 2.0-2.5 cubic feet of peat-based growing medium, 1 lb. of dolomite, and 1-1½ lbs. of fertilizer are needed for planting, and may also be included with your system depending on your purchase. Additionally, you will need plants, scissors, and a water source. \
+                       \n \n{Fore.YELLOW}{Style.BRIGHT}PLANTING SELECTION {Style.RESET_ALL}\n\nUsing the Placement Chart, determine what type and how many plants you need. Choose one type of plant per EarthBox® gardening system. Seedlings available in 2” pots are easiest to plant, but pots up to 6” can also be used. Directly sowing seeds should be done only with seeds that germinate quickly (cucumbers, squash, corn, beans, peas, lettuce). For best results, do not overcrowd the EarthBox® gardening system or try to grow crops that are not listed on the Placement Chart. To grow different crops in the same system, refer to the combination planting chart and instructions at EarthBox.com/blog. ")
+                print (f"\n{Fore.YELLOW}{Style.BRIGHT}GROWING MEDIA {Style.RESET_ALL} \n \nMost growing media labeled for container gardening will work with the EarthBox® gardening system. You’ll need 2.0-2.5 cubic feet (60-75 quarts) for each system. Choose a peat-based growing medium with perlite and/or vermiculite. Growing media with added fertilizer is suitable, but it does NOT replace the fertilizer application shown in Step 7; additional fertilizer is still required. Do NOT use compost, coir-based growing media, or any media that contains rock, clay, sand, or topsoil in the EarthBox® gardening system. Be sure to pre-moisten your growing medium a few days before setting up the EarthBox® gardening system. Using dry growing medium may result in air pockets that prevent proper water absorption, or can greatly delay getting water to plants. \
+                       \n \n{Fore.YELLOW}{Style.BRIGHT}DOLOMITE{Style.RESET_ALL} \n \nDolomite is lime that contains calcium and magnesium—essential trace elements for growing most fruiting plants. It helps prevent Blossom End Rot (BER), a common disorder in tomatoes and pepper; and helps balance the pH of the growing media. Incorporate 1 lb. of dolomite during the initial planting, and each year after when replanting your EarthBox® gardening system. Do NOT substitute dolomite with hydrated lime or agricultural lime.")
+                print (f"\n{Fore.YELLOW}{Style.BRIGHT}FERTILIZER/PLANT FOOD{Style.RESET_ALL} \n \nThe EarthBox® gardening system is designed to be used with common dry granular fertilizer or plant food for vegetables. Do NOT use water-soluble or time-release fertilzer. Each of the three N-P-K numbers on the label should be between 5 and 15—use a higher Phosphorus number (P) when growing fruiting plants (tomatoes, peppers, squash), and a higher Nitrogen (N) number when growing greens (herbs, spinach, lettuce). You can use synthetic fertilizer or organic/natural fertilizer. If using synthetic fertilizer, use 1 lb.; if using organic or natural fertilizer, use 1½ lbs.")
+                break
+            if i2 == 7:
+                print (f"{Fore.CYAN}{Style.BRIGHT} == Managing a Farm by Sherman Johnson =={Style.RESET_ALL} \
+                       \n\n{Fore.YELLOW}{Style.BRIGHT}Chapter 1: {Style.RESET_ALL} FARMING AS A BUSINESS AND A WAY OF LIVING\n")
+                print ("This book deals largely with the problems that confront the individual farmer in getting started in farming, in organizing the farm, and in operating it so as to provide a good and stable income and a satisfactory living for the farm family. But the farmer is also an important member of the society in which he is living. He has a responsibility as a member of that society, and the functioning of the world about him affects his business as well as the living conditions of his family. Consequently, the problems confronting the farmer in organizing and operating his business are considered in the setting of the farmer as a member of the society in which he is living.\
+                        \nFarming is the oldest vocation of civilized man. Even today more people in this world are engaged in farming than in any other way of earning a living. The proportion of farmers to the total population, however, has been gradually reduced in the highly industrialized nations. Machines and other improvements in farming have made it possible for fewer people to grow the food for larger and larger populations. This has meant that more people could produce those goods and services other than food which we enjoy as a part of our living today. The shift to other occupations in this country from 1870 to 1940 is shown in figure 1. \
+                        \nAlthough the United States is now one of the more highly industrialized nations, about 28,000,000 out of our present population of 134,000,000 live on farms. There are about 6,000,000 farms of different types and sizes. Some are very small. Some are part-time units operated by persons who also have other employment, at least part of the time. Many farms are too small to provide a good living for the farm family, even though the families living on these farms do not have outside employment")
+                break
+            if i2 == 8:
+                 print (f"{Fore.CYAN}{Style.BRIGHT} == Manual of Gardening by Sherman Johnson =={Style.RESET_ALL} \
+                        \n\n{Fore.YELLOW}{Style.BRIGHT}Chapter 1: {Style.RESET_ALL} THE OPEN CENTER\n")
+                 print ("   Wherever there is soil, plants grow and produce their kind, and all plants are interesting; when a person makes a choice as to what plants he shall grow in any given place, he becomes a gardener or a farmer; and if the conditions are such that he cannot make a choice, he may adopt the plants that grow there by nature, and by making the most of them may still be a gardener or a farmer in some degree. \
+                        \n\n   Every family, therefore, may have a garden. If there is not a foot of land, there are porches or windows. Wherever there is sunlight, plants may be made to grow; and one plant in a tin-can may be a more helpful and inspiring garden to some mind than a whole acre of lawn and flowers may be to another. \
+                        \n\n   The satisfaction of a garden does not depend on the area, nor, happily, on the cost or rarity of the plants. It depends on the temper of the person. One must first seek to love plants and nature, and then to cultivate the happy peace of mind that is satisfied with little. \
+                        \n\n   In the vast majority of cases a person will be happier if he has no rigid and arbitrary notions, for gardens are moodish, particularly with the novice. If plants grow and thrive, he should be happy; and if the plants that thrive chance not to be the ones that he planted, they are plants nevertheless, and nature is satisfied with them. \
+                        \n\n   We are wont to covet the things that we cannot have; but we are happier when we love the things that grow because they must. A patch of lusty pigweeds, growing and crowding in luxuriant abandon, may be a better and more worthy object of affection than a bed of coleuses in which every spark of life and spirit and individuality has been sheared out and suppressed. The man who worries morning and night about the dandelions in the lawn will find great relief in loving the dandelions. Each blossom is worth more than a gold coin, as it shines in the exuberant sunlight of the growing spring, and attracts the insects to its bosom. Little children like the dandelions: why may not we? Love the things nearest at hand; and love intensely. If I were to write a motto over the gate of a garden, I should choose the remark that Socrates is said to have made as he saw the luxuries in the market, “How much there is in the world that I do not want!” \
+                        \n\n   I verily believe that this paragraph I have just written is worth more than all the advice with which I intend to cram the succeeding pages, notwithstanding the fact that I have most assiduously extracted this advice from various worthy but, happily, long-forgotten authors. Happiness is a quality of a person, not of a plant or a garden; and the anticipation of joy in the writing of a book may be the reason why so many books on garden-making have been written. Of course, all these books have been good and useful. It would be ungrateful, at the least, for the present writer to say otherwise; but books grow old, and the advice becomes too familiar. The sentences need to be transposed and the order of the chapters varied, now and then, or interest lags. Or, to speak plainly, a new book of advice on handicraft is needed in every decade, or perhaps oftener in these days of many publishers.")
+                 break
+            if i2 == 9:
+                print(f"{Fore.CYAN}{Style.BRIGHT} == Technical Gardeing Manual by Grow Appalachia =={Style.RESET_ALL} \
+                       \n\n{Fore.YELLOW}{Style.BRIGHT}                      INTRODUCTION{Style.RESET_ALL}")
+                print(f"\n\nGardening is easy, right? All you do is measure some rows, till the earth, and plant your seeds. From there, your garden will grow on its while you sit back and relax... Right? \
+                      \n\nWrong. Like all worthwhile pursuits, gardening requires devotion and routine maintenance. Your heirloom tomatoes can indeed blossom from A all the way to Z, but they will need your help getting there, as you water and perhaps trellis them along their path to ripeness. Yes, the seeds you’ve sown today will need attention tomorrow.... And the tomorrow after that, all the way to harvest time. \
+                      \n\n{Fore.YELLOW}{Style.BRIGHT}PREVENTIVE MEASURES{Style.RESET_ALL} \
+                      \n\n Often, the best way to solve a problem is by ensuring that it never happens. Of course, an incredible cook can salvage a cooking fiasco without the perfect ingredients or tools, but just imagine how much tastier the dish would be if all the right pieces had been in the kitchen all along. \
+                      \n The same applies to gardening, where the earth is your kitchen. Here’s what you can do in the early stages of gardening to ensure that you don’t end up with a fiasco months down the road. \
+                      \n\n{Fore.YELLOW}{Style.BRIGHT}SOIL TESTING{Style.RESET_ALL} \
+                      \n\n Ideally, gardening is a thoughtful activity, one involving creating life, admiring nature, and cultivating mindfulness. Soil testing does not fit well into this picture, bringing to mind images of a lifeless chemistry classroom. \
+                      \n Nevertheless, soil testing is vital, since the pH level of your soil will determine what macronutrients and micronutrients are available for your plants. The lesson is that plants, like people, need adequate shelter and access to good “food.” \
+                      \n\n Your standard soil analysis will provide you with information about your soil’s three most important macronutrients: nitrogen, potassium, and phosphorous. Calcium is sometimes included in this analysis, and you can often request information about other nutrients, like magnesium, sulfur, and iron, for a fee. \
+                      \n\n{Fore.YELLOW}{Style.BRIGHT}SOIL COLLECTION{Style.RESET_ALL} \
+                      \n\n Depending on your extension agency, you might be able to collect the soil yourself and send it in. If you take this route, the best time to test is in October or November, leaving you time to make adjustments and plan for your spring garden. \
+                      \n\n To collect the soil, you’ll need a trowel (or some other digging tool) and a bucket. You should dig out a hunk of soil about six inches deep. That hunk doesn’t really matter, so dump it somewhere. \
+                      \n\n Now you’ll need to collect a profile slice of the dirt and toss it in the bucket. (This allows you to capture a picture of the whole root zone.) Repeat this process six more times throughout your garden and then mix all of those samples in your bucket. Finally, you can bag this concoction and ship it off for analysis. All you’ve got left to do is await the results and apply the recommended amendments.")
+                break 
+            if i2 == 10:
+                print(f"{Fore.CYAN}{Style.BRIGHT} == School Gardening Manual by Chartwells =={Style.RESET_ALL} \
+                       \n\n{Fore.YELLOW}{Style.BRIGHT}Introduction{Style.RESET_ALL}")
+                print(f"The Chartwells Garden Guide is a compilation of numerous garden resources and manuals that are already available to schools. It is intended to serve as an introduction to school gardens and the Chartwells protocol for handling and serving garden produce. Therefore, it should not be used as your only source of information when embarking on a school garden project. \
+                      \n\nIstead, while using this guide be sure to refer to additional, more technical agriculture and produce safety resources as well as the available resources of numerous non-profit agencies that can be extremely helpful. Please note that if you intend to harvest and serve the garden produce in your meal program, you are required to adhere to the Chartwells- specific policies and procedures outlined in Part IV. \
+                      \n\n{Fore.YELLOW}{Style.BRIGHT}Part 1: Starting A Garden{Style.RESET_ALL} \
+                      \n\n Soil and Water - Know Before You Grow \
+                      \n\nBefore you begin your project, it is important that you test the soil and test the water. This can be done through the local health department, state agencies (such as Department of Agriculture or Farm Bureau) or local universities. The reason to test is because the quality of the water and soil has a direct impact on the quality of the plants you grow and the health and safety of your students. Be aware of this requirement when planning your timeline - it can sometimes take up to 1 month to get soil results back. \
+                      \nSome communities have large deposits of heavy metals such as lead that MUST be abated before you can grow. You may be in a situation where you must import soil for a raised bed or hoop house because of the heavy metals. Also, knowing the pH level and existing nutrient content will provide a roadmap to what types of compost and fertilizer/enrichments need to be added to the soil to maximize its growing potential. \
+                      \nLead is toxic to the nervous system especially among young children and this is a critical issue for schools. Lead is naturally present in all soils and may have a background level of 5 ppm to 40 ppm but there are a number of variables that can cause it to become higher. \
+                      \n\n Water Considerations \
+                      \n\n Water quality is also integral to the success of your school garden. Similar to the soil, some communities have chemicals in the water (such as chlorine) which will affect the pH levels in the water. There are ways to balance the pH both naturally and through conventional methods. Be familiar with the quality and safety of the water source that will be used in your garden. If you get your water from a municipal or public water system you can assume that it is safe and drinkable (potable). If the water is from a well it must be tested annually to make sure it meets the Environmental Protection Agency Standards. Make sure all water used in the garden for any purpose, including irrigation (watering), hand washing, cleaning of garden tools and equipment, is drinkable (potable) water.")    
+                break
+            else: print ("Invalid Syntax. Please select a number from the options.")       
+        except:    
+               print("That is not a number...")
+               
+               
+               
+               
+               
+if i1 == 2: #Tips Section Code Block
+  def main():1
+  time.sleep(0.3)
+  print(f"{Fore.BLACK}{Style.BRIGHT}  === Plant and Gardening Tips ==={Style.RESET_ALL}")
+  time.sleep(0.3)
+  print(f"{Fore.BLUE}{Style.BRIGHT}Generating Random Tips...{Style.RESET_ALL}")
+  planting_tips = [f'{Fore.YELLOW}{Style.BRIGHT}Plan Your Garden{Style.RESET_ALL}\n\n Start by planning your garden layout. Consider factors such as sunlight exposure, space availability, and the types of plants you want to grow. Sketch a garden plan to help visualize plant placement and maximize efficiency. The more organized you are, the prettier your gardening outcome will be.',
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Know Your Zone{Style.RESET_ALL}\n\ nDetermine your USDA hardiness zone to understand the climate conditions in your area. This information will guide your plant selection and help you choose suitable plants for your region. Some plants that survive the winter season are Lily of the Vallet, Pansies, Hostas, Coneflower, etc.',
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Prepare the Soil{Style.RESET_ALL}\n\n Ensure your soil is well-prepared before planting. Remove weeds, rocks, and debris, and improve the soil with organic matter like compost or aged manure to improve its fertility and structure. Home gardening cleaning tips are similar to general house cleaning tips. When cleaning your bedroom, clearing out bedroom dressers and cabinets is also essential. The same “starting with a clean slate” concept applies to gardening.',
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Test the Soil{Style.RESET_ALL}\n\n Perform a soil test to assess its pH level and nutrient content. This will help you determine if any specific amendments are needed to create optimal plant growth conditions. You can perform DIY soil tests by using vinegar or baking soda.',
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Choose the Right Plants{Style.RESET_ALL}\n\n Select plants that thrive in your climate, soil type, and available sunlight. Consider factors like plant size, growth habits, and compatibility when choosing plants for your garden. Hydrangea Arborecens, Rosa, Iris Pseudacorus, Geranium Phaeum, Primula Vulgaris, Hemerocallis, and Euphorbia Characias are the best plants that can withstand all seasons.',
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Start with Easy-to-Grow Plants{Style.RESET_ALL}\n\n If you’re a beginner, start with resilient, easy-to-grow plants that require minimal maintenance. Herbs like basil, rosemary, mint, or vegetables like tomatoes, lettuce, and radishes are good for beginners.', 
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Provide Adequate Water{Style.RESET_ALL}\n\n Proper watering is crucial for plant health. Water deeply and irregularly, allowing the soil to dry slightly between watering sessions. Avoid overwatering so as to avoid root rot and other issues.', 
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Plant Portfolio{Style.RESET_ALL}\n\n Store plant tags and sticks inside a cheap photo album. You can add details such as when and where the plants were purchased, special care or even the plant’s location on a sketch of your yard.', 
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Practice Companion Planting{Style.RESET_ALL}\n\n Companion planting pertains to planting different plants close to each other to protect each other from annoying pests. Utilize companion planting techniques to maximize space and create mutually beneficial plant combinations. For example, planting marigolds alongside tomatoes can deter pests and promote healthier growth.', 
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Implement Crop Rotation{Style.RESET_ALL}\n\n Rotate your crops each season to prevent soil depletion and reduce the risk of pests and diseases. Avoid planting the same family of plants in the same spot year after year.', 
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Prune Regularly{Style.RESET_ALL}\n\nPruning refers to removing plant parts for horticulture and landscaping purposes, such as branches, spent flowers, and buds. Regular pruning helps maintain plant shape, encourages healthy growth, and improves airflow. Remove dead or damaged branches, and prune for shape and size control when necessary.', 
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Support Climbing Plants{Style.RESET_ALL}\n\n Provide trellises, stakes, or cages for climbing plants such as tomatoes, cucumbers, and beans. Proper support prevents sprawling, increases air circulation, and improves plant health. Also, aren’t climbing plants such a beauty to look at?', 
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Feed Your Plants{Style.RESET_ALL}\n\n Fertilize your plants regularly to replenish soil nutrients. Use organic fertilizers or compost to provide a slow-release source of nutrients and promote long-term soil health. Some examples of organic fertilizers are worm castings, cow manure, bone meal, blood meal, green manure, etc.', 
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Practice Integrated Pest Management (IPM){Style.RESET_ALL}\n\nAdopt an IPM approach to pest management by using a combination of prevention, cultural practices, and, if necessary, targeted treatments. Monitor plants regularly for signs of pests and take appropriate action to minimize damage.', 
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Attract Beneficial Insects{Style.RESET_ALL}\n\n Encourage beneficial insects like ladybugs, lacewings, and bees in your garden by planting specific flowers that attract them. These insects help pollinate plants and control harmful pests naturally.', 
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Weed Regularly{Style.RESET_ALL}\n\n Keep your garden free from weeds that compete with your plants for resources. Regularly weed by hand or use a mulch to suppress weed growth and make maintenance easier. Weeding regularly also keeps your garden nice and tidy.', 
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Harvest at the Right Time{Style.RESET_ALL}\n\n Learn the optimal harvesting time for each plant. Harvesting too early or late can affect flavor, texture, and overall quality. Follow guidelines specific to each crop for best results.', 
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Preserve Excess Produce{Style.RESET_ALL}\n\n If you have an abundance of fruits or vegetables, consider preserving them through canning, freezing, or drying. This allows you to enjoy your harvest throughout the year and reduces waste.', 
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Learn from Your Garden{Style.RESET_ALL}\n\n Observe and learn from your garden’s successes and failures. Take note of what works well in your specific conditions and make adjustments for future seasons.', 
+                   
+                   f'{Fore.YELLOW}{Style.BRIGHT}Enjoy the Process{Style.RESET_ALL}\n\n Above all, enjoy the process of gardening. Spend time in your garden, connect with nature, and relish the satisfaction of nurturing plants and witnessing their growth. Gardening is not just about the result but also the joy it brings along the way.']
+  
+  def get_random_tip(planting_tips):
+      return random.choice(planting_tips)
+  gentip = get_random_tip(planting_tips)
+  time.sleep(0.6)
+  print (gentip)
+  time.sleep(0.3)
+  while True:
+      
+      go = input(f"{Fore.BLUE}{Style.BRIGHT}Generate another tip? Y/N {Style.RESET_ALL}")
+      time.sleep(0.5)
+      if go in ['y','Y']:
+          def get_random_tip(planting_tips):
+              return random.choice(planting_tips)
+          gentip2 = get_random_tip(planting_tips)
+          print (gentip2)
+      if go in ['n','N']:
+          time.sleep(0.2)
+          print ("Thank you, Farewell!")
+          break
+      
+        
+      
+        
+      
+if i1 == 3: #Date Calculator
+    print(f"{Fore.BLACK}{Style.BRIGHT}  === Plant Fruition Calculator ==={Style.RESET_ALL} \
+          \n{Fore.BLUE}{Style.BRIGHT}There are currently 30 types of crops available for calculation.{Style.RESET_ALL} \n\n(1) Orange         (11) Jackfruit      (21) Papaya \
+          \n(2) Apple          (12) Indian Mango   (22) Strawberry \n(3) Cabbage        (13) Celery         (23) Carrot \
+          \n(4) Carabao Mango  (14) Durian         (24) Pomelo     \n(5) Calamansi      (15) Tomato         (25) Sweet Potato \
+          \n(6) Potato         (16) Grapes         (26) Lemon      \n(7) Coconut        (17) Cardava Banana (27) Lakatan Banana \
+          \n(8) Mung Beans     (18) Eggplant       (28) Onion      \n(9) Onion          (19) Garlic         (29) Corn \
+          \n(10) Horseradish   (20) Green Beans    (30) Bittergourd")
+    while True: 
+            date1 = date.today()
+            calcu = int(input('Which plant do you wish to calculate? \n'))
+            time.sleep (0.5)
+            if calcu == 1: 
+                new_date = date1 + relativedelta(months=12)
+                new_date2 = date1 + relativedelta(months=36)
+                print ("An orange seedling takes 1-4 years to fully grow into a tree. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 2: 
+                new_date = date1 + relativedelta(months=94)
+                new_date2 = date1 + relativedelta(months=98)
+                print ("Apple seedlings usually take 8 years to became a fully sized tree. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 3: 
+                new_date = date1 + relativedelta(months=2)
+                new_date2 = date1 + relativedelta(months=3)
+                print ("Cabbages grow relatively quickly. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 4: 
+                new_date = date1 + relativedelta(months=61)
+                new_date2 = date1 + relativedelta(months=96)
+                print ("Because mangoes only comes from trees, it takes a long time. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 5: 
+                new_date = date1 + relativedelta(months=32)
+                new_date2 = date1 + relativedelta(months=37)
+                print ("It takes three years for a calamansi seedling to become a tree. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 6: 
+                new_date = date1 + relativedelta(months=2)
+                new_date2 = date1 + relativedelta(months=3)
+                print ("Potatoes are easy to grow. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 7: 
+                new_date = date1 + relativedelta(months=71)
+                new_date2 = date1 + relativedelta(months=180)
+                print ("Coconut trees are some of the tallest but also takes the longest time.\
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 8: 
+                new_date = date1 + relativedelta(months=3)
+                new_date2 = date1 + relativedelta(months=4)
+                print ("Mung beans can be grown inside or outside. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 9: 
+                new_date = date1 + relativedelta(months=3)
+                new_date2 = date1 + relativedelta(months=4)
+                print ("Onions require cool seasons to grow.\
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 10: 
+                new_date = date1 + relativedelta(months=9)
+                new_date2 = date1 + relativedelta(months=11)
+                print ("Horseradishes are important to Filipino Cuisine. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 11: 
+                new_date = date1 + relativedelta(months=36)
+                new_date2 = date1 + relativedelta(months=48)
+                print ("Jackfruits can take up to 3 to 4 years to develop. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 12: 
+                new_date = date1 + relativedelta(months=61)
+                new_date2 = date1 + relativedelta(months=96)
+                print ("It takes a while for a mango seedling to become a mature tree. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 13: 
+                new_date = date1 + relativedelta(months=5)
+                new_date2 = date1 + relativedelta(months=5)
+                print ("Celery is a long crop. It needs 130 to 140 days to mature. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 14: 
+                new_date = date1 + relativedelta(months=84)
+                new_date2 = date1 + relativedelta(months=120)
+                print ("Like most fruit bearing trees, a Durian Tree takes long to mature.\
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 15: 
+                new_date = date1 + relativedelta(months=2)
+                new_date2 = date1 + relativedelta(months=3)
+                print ("Generally, it takes 60 - 100 days from germination to harvest. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 16: 
+                new_date = date1 + relativedelta(months=24)
+                new_date2 = date1 + relativedelta(months=36)
+                print ("While grapevines grow easily, producing grapes takes time. \
+                       \n\nIf you plant now, the fruits will blossom by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 17: 
+                new_date = date1 + relativedelta(months=9)
+                new_date2 = date1 + relativedelta(months=12)
+                print ("Bananas are a perennial plant. It takes 9-12 months for it to grow fruits. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 18: 
+                new_date = date1 + relativedelta(months=2)
+                new_date2 = date1 + relativedelta(months=3)
+                print ("Eggplants are easy to plant and manage. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 19: 
+                new_date = date1 + relativedelta(months=9)
+                new_date2 = date1 + relativedelta(months=12)
+                print ("Garlic grows best in deep, well-drained organic soil. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 20: 
+                new_date = date1 + relativedelta(months=2)
+                new_date2 = date1 + relativedelta(months=3)
+                print ("A bean stalk usually takes 1 to 2 months to be ready for harvesting. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 21: 
+                new_date = date1 + relativedelta(months=12)
+                new_date2 = date1 + relativedelta(months=36)
+                print ("An orange seedling takes 1-4 years to fully grow into a tree. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 22: 
+                new_date = date1 + relativedelta(months=7)
+                new_date2 = date1 + relativedelta(months=11)
+                print ("Well-cared papaya plants may begin flowering by 4 months and start producing by 7 months. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 23: 
+                new_date = date1 + relativedelta(months=3)
+                new_date2 = date1 + relativedelta(months=4)
+                print ("Carrots should be ready for harvest after 70 - 80 days. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 24: 
+                new_date = date1 + relativedelta(months=96)
+                new_date2 = date1 + relativedelta(months=120)
+                print ("A pomelo seedling can take up to 10 years to become a fruit-bearing tree. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 25: 
+                new_date = date1 + relativedelta(months=3)
+                new_date2 = date1 + relativedelta(months=4)
+                print ("Like it's cousin, Sweet potatoes take about 2-4 months to grow. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 26: 
+                new_date = date1 + relativedelta(months=24)
+                new_date2 = date1 + relativedelta(months=39)
+                print ("As with most citrus plants, a seedling takes 3 years to grow. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 27: 
+                new_date = date1 + relativedelta(months=10)
+                new_date2 = date1 + relativedelta(months=15)
+                print ("In colder climates, this kind of Banana can take up to 15 months to produce fruits. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 28: 
+                new_date = date1 + relativedelta(months=3)
+                new_date2 = date1 + relativedelta(months=4)
+                print ("Onion seedlings take about 90-100 days to mature. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 29: 
+                new_date = date1 + relativedelta(months=2)
+                new_date2 = date1 + relativedelta(months=3)
+                print ("Corn usually takes 2-3 months from planting seeds to harvest. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break
+            if calcu == 30: 
+                new_date = date1 + relativedelta(months=1)
+                new_date2 = date1 + relativedelta(months=2)
+                print ("Bittergourd will start within 55 to 60 days from planting. \
+                       \n\nIf you plant now, the seedling will grow by ") 
+                print (new_date,"to", new_date2)
+                break           
+            else: print("Select from the options given.")
